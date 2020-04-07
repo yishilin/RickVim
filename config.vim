@@ -284,7 +284,7 @@ set sidescrolloff=7
 set sidescroll=1
 
 "" 高亮当前行
-"set cursorline
+set cursorline
 
 set cf          " Enable error files & error jumping.
 
@@ -406,6 +406,8 @@ function! CurDir()
 endfunction
 
 
+imap idate <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
+imap iday <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
 
 
 set bsdir=buffer
