@@ -22,9 +22,24 @@ Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular' 
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
+Plug 'tmsvg/pear-tree'
+
+
+" snippets plugin
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
+"to see the full snippets content as below
+Plug 'honza/vim-snippets' 
+
 Plug 'iamcco/markdown-preview.vim'
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
+Plug 'Yggdroot/indentLine'
+
+"shows a git diff in the sign column and stages/previews/undoes hunks and partial hunks.
+Plug 'airblade/vim-gitgutter'
+
+Plug 'mbbill/undotree' "The undo history visualizer
 
 "colorscheme molokai
 Plug 'tomasr/molokai' 
@@ -718,14 +733,19 @@ set listchars=tab:\ \ ,extends:>,precedes:<
 
 
 "------------------------------------------------
-" EasyAlign
-" --------------
-
+" EasyAlign https://github.com/junegunn/vim-easy-align
+" -------------- 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-"------------------------------------------------
+"------------------------------------------------ 
 
+
+"------------------------------------------------
+"" https://github.com/kien/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+"------------------------------------------------
 
