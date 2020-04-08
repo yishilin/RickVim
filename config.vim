@@ -650,7 +650,8 @@ endif
 augroup MRU
   autocmd!
   nmap <silent> mm <esc>:MRU<cr>
-  let MRU_Max_Entries = 60
+  let MRU_Max_Entries = 100
+  let MRU_Add_Menu = 0
   let MRU_Exclude_Files = '.*\.pdf$\|.*\.zip$\|.*\.rar$\|.*\.7z$\|.*\.class$\|.*\.wiki$'
   let MRU_Exclude_Files .= '\|.*BExec_output.*\|.*NERD_tree_.*\|.*__MRU_Files__.*'
   let MRU_Exclude_Files .= '\|.*favex/favlist\|.*\.fugitiveblame' 

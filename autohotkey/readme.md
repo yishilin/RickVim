@@ -84,7 +84,7 @@ Follow the steps in [https://windowsloop.com/run-autohotkey-script-at-windows-st
 
 <tr>
 <td>mac hotkey</td>
-<td>alt+a, alt+c, alt+x, alt+v, alt+s, alt+r, alt+shift+r, alt+w, alt+n, alt+t, alt+l </td>
+<td>alt+a, alt+c, alt+x, alt+v, alt+s, alt+r, alt+shift+r, alt+w, alt+n, alt+t, alt+l, alt+g </td>
 </tr>
 
 </table>

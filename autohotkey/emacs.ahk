@@ -239,6 +239,8 @@ if((A_PtrSize=8&&A_IsCompiled="")||!A_IsUnicode){ ;32 bit=4  ;64 bit=8
   Return 
 
 
+
+
 ^b::
   If is_target()
     Send %A_ThisHotkey%
@@ -403,3 +405,9 @@ if((A_PtrSize=8&&A_IsCompiled="")||!A_IsUnicode){ ;32 bit=4  ;64 bit=8
   Else
     Send ^l
   Return
+!g::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    Send ^g
+  Return 
