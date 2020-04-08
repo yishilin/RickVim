@@ -18,7 +18,7 @@ is_pre_x = 0
 is_pre_spc = 0
 
 ReloadScript() {
-  MsgBox, 4, AutoHotkey RELOAD, Note: all loaded AutoHotkey scripts will be reloaded!
+  MsgBox, 4, AutoHotkey Reloaded, Note: all loaded AutoHotkey scripts will be reloaded!
   sleep 1000
   Reload
   return
@@ -31,29 +31,64 @@ ReloadScript() {
 ; (Please comment out applications you don't use)
 is_target()
 {
-  IfWinActive,ahk_class ConsoleWindowClass ; Cygwin
-    Return 1 
+  SetTitleMatchMode,RegEx
+
   IfWinActive,ahk_class MEADOW ; Meadow
     Return 1 
   IfWinActive,ahk_class cygwin/x X rl-xterm-XTerm-0
     Return 1
-  IfWinActive,ahk_class MozillaUIWindowClass ; keysnail on Firefox
-    Return 1
   ; Avoid VMwareUnity with AutoHotkey
   IfWinActive,ahk_class VMwareUnityHostWndClass
     Return 1
+
+  ;ahk_class Vim
+  ;ahk_exe gvim.exe
   IfWinActive,ahk_class Vim ; GVIM
     Return 1
-;  IfWinActive,ahk_class SWT_Window0 ; Eclipse
-;    Return 1
-;   IfWinActive,ahk_class Xming X
-;     Return 1
-;   IfWinActive,ahk_class SunAwtFrame
-;     Return 1
-;   IfWinActive,ahk_class Emacs ; NTEmacs
-;     Return 1  
-;   IfWinActive,ahk_class XEmacs ; XEmacs on Cygwin
-;     Return 1
+
+
+  ;Merlin, Cygwin
+  ;ahk_class ConsoleWindowClass
+  ;ahk_exe powershell.exe
+  
+  ;ahk_class ConsoleWindowClass
+  ;ahk_exe powershell.exe
+  
+  ;ahk_class ConsoleWindowClass
+  ;ahk_exe vim.exe
+
+  ;ahk_class ConsoleWindowClass
+  ;ahk_exe cmd.exe
+
+  IfWinActive, ahk_class ConsoleWindowClass
+    Return 1
+
+  ;ahk_class mintty  ;git bash
+  ;ahk_exe mintty.exe
+  IfWinActive, ahk_class mintty
+    Return 1
+
+
+  ;ahk_class PX_WINDOW_CLASS
+  ;ahk_exe sublime_text.exe
+  IfWinActive, ahk_exe sublime
+    Return 1
+  
+  ;ahk_class HwndWrapper[PowerShell_ISE.exe;;2743ac2d-9a77-4ebb-8283-b6ac2472d810]
+  ;ahk_exe PowerShell_ISE.exe
+  IfWinActive, ahk_exe PowerShell
+    Return 1
+  
+  ;ahk_class Chrome_WidgetWin_1
+  ;ahk_exe Code.exe
+  IfWinActive, ahk_exe Code.exe
+    Return 1
+  
+  ;ahk_exe WindowsTerminal.exe
+  ;ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+  IfWinActive, ahk_exe WindowsTerminal.exe 
+    Return 1
+
   Return 0
 }
 
