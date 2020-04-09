@@ -39,6 +39,8 @@ Plug 'Yggdroot/indentLine'
 "shows a git diff in the sign column and stages/previews/undoes hunks and partial hunks.
 Plug 'airblade/vim-gitgutter'
 
+Plug 'tpope/vim-fugitive'
+
 Plug 'mbbill/undotree' "The undo history visualizer
 
 "colorscheme molokai
