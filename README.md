@@ -6,13 +6,25 @@
 
 [https://github.com/junegunn/vim-plug](https://github.com/junegunn/vim-plug)
 
-**UNIX(and Windows Git Bash):**
+**UNIX(and Windows Git Bash):** 
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 Or simple copy file:
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim save as file ~/.vim/autoload/plug.vim
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim save as file ~/.vim/autoload/plug.vim 
+```
+
+**Windows (PowerShell):**
+``` powershell 
+md ~\vimfiles\autoload
+$uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+(New-Object Net.WebClient).DownloadFile(
+  $uri,
+  $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
+    "~\vimfiles\autoload\plug.vim"
+  )
+)
 ```
 
 (2) Git CRLF config:
@@ -39,7 +51,7 @@ Copy the CONTENT of ~/RickVim/platform_vimrc.vim to your vimrc file (and change 
 ```
 Note: 
 You need first comment the line of `colorscheme molokai` before the `:PlugInstall`, 
-after the installation finish, then uncomment it back.
+after the installation finish, remember to uncomment it back.
 
 
 ### 3/ execute command in vim:
