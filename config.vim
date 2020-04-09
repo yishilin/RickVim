@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 Plug 'preservim/nerdtree'
-Plug 'yegappan/mru'
+Plug 'yegappan/mru', { 'tag': 'v3.3'}
 Plug 'preservim/nerdcommenter'
 Plug 'adelarsq/vim-matchit'
 Plug 'inkarkat/vim-ingo-library'
