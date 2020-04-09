@@ -12,27 +12,29 @@ Follow the steps in [https://windowsloop.com/run-autohotkey-script-at-windows-st
 
 ## Supported keybindings
 <table>
-  <tr>
-    <th>Keybinding</th>
-    <th>Function</th>
-  </tr>
+<tr>
+<th>Keybinding</th>
+<th>Function</th>
+</tr>
 <tr>
 <td>ctrl+alt+r</td>
 <td>* reload the script</td>
 </tr>
+<tr>
 <td>ctrl+alt+e</td>
 <td>* turn on/off the mapped hotkeys</td>
 </tr>
-<tr>
 
 <tr>
 <td>ctrl+a</td>
 <td>move_beginning_of_line</td>
 </tr>
+<tr>
 <td>ctrl+e</td>
 <td>move_end_of_line</td>
 </tr>
 
+<tr> 
 <td>ctrl+f</td>
 <td>forward_char</td>
 </tr>
@@ -64,15 +66,14 @@ Follow the steps in [https://windowsloop.com/run-autohotkey-script-at-windows-st
 <td>left_kill_word</td>
 </tr>
 <tr>
-<tr>
 <td>ctrl+h</td>
 <td>delete_backward_char</td>
 </tr>
 <tr>
-<tr>
 <td>ctrl+d</td>
 <td>delete_char</td>
 </tr>
+<tr>
 <td>ctrl+u</td>
 <td>kill_line_before</td>
 </tr>
@@ -84,7 +85,9 @@ Follow the steps in [https://windowsloop.com/run-autohotkey-script-at-windows-st
 
 <tr>
 <td>mac hotkey</td>
-<td>alt+a, alt+c, alt+x, alt+v, alt+s, alt+r, alt+shift+r, alt+w, alt+n, alt+t, alt+l, alt+g </td>
+<td>
+alt+a, alt+c, alt+x, alt+v, alt+s, alt+r, alt+shift+r, alt+w, alt+n<br>
+alt+t, alt+l, alt+g </td>
 </tr>
 
 </table>
