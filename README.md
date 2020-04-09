@@ -37,6 +37,10 @@ note: on windows gVim and Git bash vim have different vimrc.
 Edit your vimrc
 Copy the CONTENT of ~/RickVim/platform_vimrc.vim to your vimrc file (and change per your need)
 ```
+Note: 
+You need first comment the line of `colorscheme molokai` before the `:PlugInstall`, 
+after the installation finish, then uncomment it back.
+
 
 ### 3/ execute command in vim:
 ```bash
