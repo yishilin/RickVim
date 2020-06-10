@@ -1,3 +1,4 @@
+" Help: https://github.com/junegunn/vim-plug
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
@@ -23,6 +24,7 @@ Plug 'godlygeek/tabular'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'tmsvg/pear-tree'
+Plug 'PProvost/vim-ps1'
 
 " snippets plugin
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -179,7 +181,7 @@ vnoremap < <gv
 if 'windows' == g:platform
   "set guifont=ProggyCleanCP:h12:cANSI
   "set guifont=ProggyCleanTT:h12:cDEFAULT
-  set guifont=MONACO:h10
+  set guifont=MONACO:h12
   "set guifont=Fixedsys:h11
   "set guifont=Consolas:h11:cDEFAULT
 elseif 'mac' == g:platform
