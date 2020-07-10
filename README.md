@@ -64,9 +64,13 @@ sudo vim #start vim in Linux
 
 
 
-## 4/ Powershell setting
+## 4/ (Optional) Powershell setting
 
 * Install http://ctags.sourceforge.net/ (ctags.exe into path)
+  * Ubuntu/apt: sudo apt-get install ctags
+  * Ubuntu/sudo: sudo snap install ctags
+  * Mac/brew: brew install ctags
+
 * https://github.com/majutsushi/tagbar
 * add below content to vim ~/ctags.cnf (On Win7)
 
@@ -85,3 +89,18 @@ sudo vim #start vim in Linux
 --languages=+powershell
 
 ```
+
+## 5/ (Optional) Zsh
+sudu apt-get install zsh
+
+install https://ohmyz.sh/
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```bash
+
+
+
+vim ~/.tmux.conf
+```bash
+
+```b
