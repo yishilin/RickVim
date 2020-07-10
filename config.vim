@@ -1,4 +1,10 @@
 " Help: https://github.com/junegunn/vim-plug
+"
+" :PlugInstall to install plugins
+" :PlugUpdate  to install or update plugins
+" :PlugClean   to remove unlisted plugins
+" :PlugStatus  to check the status of plugins
+
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
@@ -46,6 +52,9 @@ Plug 'mbbill/undotree' "The undo history visualizer
 
 "colorscheme molokai
 Plug 'tomasr/molokai' 
+
+Plug 'majutsushi/tagbar'
+
  
 " Initialize plugin system
 call plug#end()
@@ -181,7 +190,7 @@ vnoremap < <gv
 if 'windows' == g:platform
   "set guifont=ProggyCleanCP:h12:cANSI
   "set guifont=ProggyCleanTT:h12:cDEFAULT
-  set guifont=MONACO:h12
+  set guifont=MONACO:h13
   "set guifont=Fixedsys:h11
   "set guifont=Consolas:h11:cDEFAULT
 elseif 'mac' == g:platform
@@ -248,7 +257,6 @@ if has("gui_running")
 else
   ""in command line
 endif
-
 
 
 
@@ -731,9 +739,43 @@ set nolist
 
 "" 定义显示<TAB>的方式:高亮<tab>
 set listchars=tab:\ \ ,extends:>,precedes:<
-
 "------------------------------------------------
 
+
+" ------------------------------------------------
+"" open files in vscode
+" -------------------------------------
+function! VscodeOpenCurFile()
+  silent exec "!code %"
+endfunction
+function! VscodeOpenCurDir()
+  cd %:p:h
+  silent exec "!code ."
+endfunction
+command! -nargs=0  VScodeOpenCurFile :call VscodeOpenCurFile()
+command! -nargs=0  VScodeOpenCurDir :call VscodeOpenCurDir()
+map <silent> <F4> :VScodeOpenCurFile<cr>
+" ------------------------------------------------
+
+
+"------------------------------------------------
+"" setting of Plug 'majutsushi/tagbar'
+
+let g:tagbar_type_ps1 = {
+    \ 'ctagstype' : 'powershell',
+    \ 'kinds'     : [
+        \ 'f:function',
+        \ 'c:class',
+        \ 'd:class inherited',
+        \ 'h:functionCall',
+        \ 'i:filter',
+        \ 'a:alias',
+        \ 'r:region'
+    \ ]
+\ }
+nmap <F8> :TagbarToggle<CR>
+nmap mt :TagbarToggle<CR>
+"------------------------------------------------
 
 
 "------------------------------------------------
@@ -752,4 +794,5 @@ nmap ga <Plug>(EasyAlign)
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 "------------------------------------------------
+
 
