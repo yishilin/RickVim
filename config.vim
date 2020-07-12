@@ -40,7 +40,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets' 
 
 Plug 'iamcco/markdown-preview.vim'
-Plug 'tpope/vim-markdown', {'for': 'markdown'} 
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'} 
 Plug 'Yggdroot/indentLine'
 
 "shows a git diff in the sign column and stages/previews/undoes hunks and partial hunks.
@@ -761,8 +761,7 @@ map <silent> <F4> :VScodeOpenCurFile<cr>
 
 
 "------------------------------------------------
-"" setting of Plug 'majutsushi/tagbar'
-
+"" setting of Plug 'majutsushi/tagbar' 
 let g:tagbar_type_ps1 = {
     \ 'ctagstype' : 'powershell',
     \ 'kinds'     : [
@@ -798,6 +797,13 @@ let g:ctrlp_cmd = 'CtrlP'
 "------------------------------------------------
 
 
-"markdown config
-let g:markdown_syntax_conceal = 0
-let g:markdown_minlines = 100
+"------------------------------------------------
+"" Plug 'plasticboy/vim-markdown', {'for': 'markdown'} 
+let g:vim_markdown_conceal = 1
+let g:vim_markdown_conceal_code_blocks = 0
+set conceallevel=2
+set concealcursor=n ""current line only hide in normal mode
+"------------------------------------------------
+
+
+
