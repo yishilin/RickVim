@@ -40,7 +40,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets' 
 
 Plug 'iamcco/markdown-preview.vim'
-Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
+Plug 'tpope/vim-markdown', {'for': 'markdown'} 
 Plug 'Yggdroot/indentLine'
 
 "shows a git diff in the sign column and stages/previews/undoes hunks and partial hunks.
@@ -190,9 +190,9 @@ vnoremap < <gv
 if 'windows' == g:platform
   "set guifont=ProggyCleanCP:h12:cANSI
   "set guifont=ProggyCleanTT:h12:cDEFAULT
-  set guifont=MONACO:h13
+  "set guifont=MONACO:h13
   "set guifont=Fixedsys:h11
-  "set guifont=Consolas:h11:cDEFAULT
+  set guifont=Consolas:h14:cDEFAULT
 elseif 'mac' == g:platform
   "set guifont=ProggyCleanCP:h12:cANSI
   "set guifont=ProggyCleanTT:h12:cDEFAULT
@@ -638,6 +638,8 @@ imap <c-p>      <Up>
 imap <c-n>      <Down>
 imap <c-a>      <Home>
 imap <c-e>      <End>
+""c-k del end of line
+imap <c-k>      <esc>lDA 
 
 
 ""--------------------------------------------
@@ -796,3 +798,6 @@ let g:ctrlp_cmd = 'CtrlP'
 "------------------------------------------------
 
 
+"markdown config
+let g:markdown_syntax_conceal = 0
+let g:markdown_minlines = 100
