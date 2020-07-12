@@ -54,6 +54,7 @@ Plug 'mbbill/undotree' "The undo history visualizer
 Plug 'tomasr/molokai' 
 
 Plug 'majutsushi/tagbar'
+Plug 'elzr/vim-json'
 
  
 " Initialize plugin system
