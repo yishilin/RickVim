@@ -31,6 +31,7 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'tmsvg/pear-tree'
 Plug 'PProvost/vim-ps1'
+Plug '907th/vim-auto-save'
 
 " snippets plugin
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -807,4 +808,4 @@ set concealcursor=n ""current line only hide in normal mode
 "------------------------------------------------
 
 
-
+let g:auto_save = 1  " enable AutoSave on Vim startup
