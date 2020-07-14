@@ -28,6 +28,9 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
 (2) Git CRLF config:
+
+Pls first ensure you could run `git` in your operation syste by https://git-scm.com
+
 ```bash
 #On Windows(using CRLF): when checkin auto change CRLF toLF，when checkout auto change LF to CRLF
 git config --global core.autocrlf true
@@ -62,7 +65,7 @@ sudo vim #start vim in Linux
 :PlugClean    #remove plugin
 ```
 
-
+Uncomment the line of `colorscheme molokai`
 
 ## 4/ (Optional) Powershell setting
 
