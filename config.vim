@@ -641,7 +641,7 @@ imap <c-n>      <Down>
 imap <c-a>      <Home>
 imap <c-e>      <End>
 ""c-k del end of line
-imap <c-k>      <esc>lDA 
+imap <c-k>      <esc>ld$
 
 
 ""--------------------------------------------
