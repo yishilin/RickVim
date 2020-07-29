@@ -55,7 +55,10 @@ Plug 'mbbill/undotree' "The undo history visualizer
 Plug 'tomasr/molokai' 
 
 Plug 'majutsushi/tagbar'
+
+
 Plug 'elzr/vim-json'
+let g:vim_json_syntax_conceal 
 
  
 " Initialize plugin system
@@ -809,3 +812,5 @@ set concealcursor=n ""current line only hide in normal mode
 
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
+
+
