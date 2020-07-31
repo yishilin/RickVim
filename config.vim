@@ -62,6 +62,8 @@ Plug 'majutsushi/tagbar'
 Plug 'elzr/vim-json'
 let g:vim_json_syntax_conceal = 0
 
+
+Plug 'leafgarland/typescript-vim'
  
 " Initialize plugin system
 call plug#end()
@@ -817,7 +819,7 @@ set concealcursor=n ""current line only hide in normal mode
 "------------------------------------------------
 " https://github.com/907th/vim-auto-save
 " disable AutoSave on Vim startup
-let g:auto_save = 0
+let g:auto_save = 1
 augroup ft_markdown
   au!
   au FileType markdown let b:auto_save = 1
@@ -825,3 +827,10 @@ augroup END
 "------------------------------------------------
 
 
+
+"------------------------------------------------
+" https://github.com/leafgarland/typescript-vim
+
+let g:typescript_indent_disable = 1
+
+"------------------------------------------------
