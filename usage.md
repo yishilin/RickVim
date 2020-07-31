@@ -38,9 +38,19 @@ INSERT: iday
 Command: :VScodeOpenCurFile
 NORMAL: F4
 
+## Copy code as html
+1. In LINE SELECT(will only convert selected lines) or NORMAL mode:
+:TOhtml
+2. use MRU command to copy the generated *.html file
+3. open the html file in browser
+
+see https://vim.fandom.com/wiki/Pasting_code_with_syntax_coloring_in_emails
+http://vimdoc.sourceforge.net/htmldoc/syntax.html#convert-to-HTML
+
 
 ## Paste over without overwriting register
 see https://stackoverflow.com/questions/290465/how-to-paste-over-without-overwriting-register
+
 
 
 

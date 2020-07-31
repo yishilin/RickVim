@@ -849,3 +849,9 @@ map <leader>h :History<CR>
 
 
 
+"------------------------------------------------
+" Convert as html plse using: 
+" SELECT: TOhtml
+let g:html_start_line = line("'<")
+let g:html_end_line = line("'>")
+"------------------------------------------------
