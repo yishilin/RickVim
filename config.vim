@@ -12,7 +12,8 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 Plug 'preservim/nerdtree'
-Plug 'yegappan/mru', { 'tag': 'v3.3'}
+"Plug 'yegappan/mru', { 'tag': 'v3.3'}
+Plug 'yishilin/mru', { 'branch': 'absolute_path'}
 Plug 'preservim/nerdcommenter'
 Plug 'adelarsq/vim-matchit'
 Plug 'inkarkat/vim-ingo-library'
@@ -32,8 +33,14 @@ Plug 'tomtom/tlib_vim'
 Plug 'tmsvg/pear-tree'
 Plug 'PProvost/vim-ps1'
 Plug '907th/vim-auto-save'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'junegunn/vim-peekaboo'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'rcmdnk/vim_ahk'
+
 
 " snippets plugin
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -834,3 +841,6 @@ augroup END
 let g:typescript_indent_disable = 1
 
 "------------------------------------------------
+
+
+set statusline=%f\ %y\ %{FugitiveStatusline()}
