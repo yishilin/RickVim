@@ -9,6 +9,11 @@ painful, the autoshotkey will help you.
 2. Set autohotkey script when win 10 start
 Follow the steps in [https://windowsloop.com/run-autohotkey-script-at-windows-startup/] (https://windowsloop.com/run-autohotkey-script-at-windows-startup/)
 
+3. Autohotkey with "Window Spy"
+https://www.wmzhe.cn/32391.html
+
+4. RegEx
+https://www.autohotkey.com/docs/misc/RegEx-QuickRef.htm
 
 ## Supported keybindings
 <table>
