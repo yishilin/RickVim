@@ -121,9 +121,17 @@ set noswapfile
 "set smartcase
 
 
+"need install Plug 'tpope/vim-fugitive' for git branch
+set statusline=%f\ %m%=[POS=%l,%v:%p%%/%L]%r[%{&ff}]%y%{FugitiveStatusline()}
+
+
 "---------------------------------------------
 "" copy and paste setting
 "----------------------------------
+
+"Paste over without overwriting register
+xnoremap p pgvy
+
 if 'windows' == g:platform
   "" for windows setting
   "" in windows register '+' is the same with '*'
@@ -835,7 +843,9 @@ augroup END
 "------------------------------------------------
 
 
-set statusline=%f\ %y\ %{FugitiveStatusline()}
 
 map <leader>p :Files<CR>
 map <leader>h :History<CR>
+
+
+
