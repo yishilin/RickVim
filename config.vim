@@ -71,6 +71,7 @@ let g:vim_json_syntax_conceal = 0
 
 
 Plug 'leafgarland/typescript-vim'
+let g:typescript_indent_disable = 1
  
 " Initialize plugin system
 call plug#end()
@@ -834,13 +835,7 @@ augroup END
 "------------------------------------------------
 
 
-
-"------------------------------------------------
-" https://github.com/leafgarland/typescript-vim
-
-let g:typescript_indent_disable = 1
-
-"------------------------------------------------
-
-
 set statusline=%f\ %y\ %{FugitiveStatusline()}
+
+map <leader>p :Files<CR>
+map <leader>h :History<CR>
