@@ -33,6 +33,8 @@ Plug 'tmsvg/pear-tree'
 Plug 'PProvost/vim-ps1'
 Plug '907th/vim-auto-save'
 
+Plug 'rcmdnk/vim_ahk'
+
 " snippets plugin
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
@@ -58,7 +60,7 @@ Plug 'majutsushi/tagbar'
 
 
 Plug 'elzr/vim-json'
-let g:vim_json_syntax_conceal 
+let g:vim_json_syntax_conceal = 0
 
  
 " Initialize plugin system
@@ -649,16 +651,17 @@ imap <c-k>      <esc>ld$
 
 ""--------------------------------------------
 " Window resizing mappings
+" This map impact the vim auto indent setting
 ""-------------------------
 
-if bufwinnr(1)
-  map + 8<C-W>+
-  map = 8<C-W>+
-  map - 8<C-W>-
-  map _ 8<C-W>-
-  map < 8<C-W><
-  map > 8<C-W>>
-endif 
+"if bufwinnr(1)
+  "map + 8<C-W>+
+  "map = 8<C-W>+
+  "map - 8<C-W>-
+  "map _ 8<C-W>-
+  "map < 8<C-W><
+  "map > 8<C-W>>
+"endif 
 
 
 "---------------------------------------------------------------------
@@ -811,6 +814,14 @@ set concealcursor=n ""current line only hide in normal mode
 "------------------------------------------------
 
 
-let g:auto_save = 1  " enable AutoSave on Vim startup
+"------------------------------------------------
+" https://github.com/907th/vim-auto-save
+" disable AutoSave on Vim startup
+let g:auto_save = 0
+augroup ft_markdown
+  au!
+  au FileType markdown let b:auto_save = 1
+augroup END
+"------------------------------------------------
 
 
