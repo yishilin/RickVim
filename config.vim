@@ -69,6 +69,7 @@ Plug 'mbbill/undotree' "The undo history visualizer
 Plug 'tomasr/molokai' 
 
 Plug 'majutsushi/tagbar'
+let g:tagbar_position = 'left'
 
 
 Plug 'elzr/vim-json'

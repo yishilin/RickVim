@@ -4,6 +4,11 @@ How to use vim?
 LINE SELECT, or NORMAL: 
 >, <
 
+## Method list, files list
+symbal list: NORMAL mt
+file/directory list: NORMAL cd, or ,p
+recently file list: Normal mm, or ,h
+
 
 ## Surround
 1. You have 3 lines and you want each line add <p>:
@@ -42,12 +47,6 @@ LINE SELECT:
 ,cc
 
 
-## Recent Files
-NORMAL: 
-mm
-,h
-
-
 ## Insert Date
 INSERT: idate
 INSERT: iday
@@ -56,6 +55,7 @@ INSERT: iday
 ## Open current File in Vscode
 Command: :VScodeOpenCurFile
 NORMAL: F4
+
 
 ## Copy code as html
 1. In LINE SELECT(will only convert selected lines) or NORMAL mode:
