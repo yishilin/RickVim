@@ -71,9 +71,17 @@ http://vimdoc.sourceforge.net/htmldoc/syntax.html#convert-to-HTML
 see https://stackoverflow.com/questions/290465/how-to-paste-over-without-overwriting-register
 
 
+## Move
+word: w, b, e, f, t
+WORD(non blank): W, B, E, F, T
+; ,
+^, 0, $, A, I
 
 
-Plugins:
+
+=======================================
+
+## Plugins:
 https://blog.lourenci.com/my-favorite-vim-plugins/
 https://blog.csdn.net/andylauren/article/details/52830328
 
@@ -83,3 +91,9 @@ https://yqc.im/vim-fzf-config.html
 https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
 https://github.com/junegunn/fzf.vim
 
+
+
+## CheetSheet
+https://www.fprintf.net/vimCheatSheet.html
+https://vimsheet.com/
+https://vimsheet.com/advanced.html
