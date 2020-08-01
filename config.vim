@@ -22,6 +22,7 @@ Plug 'adinapoli/vim-markmultiple'
 Plug 'ervandew/supertab' 
 Plug 'tpope/vim-scriptease'
 Plug 'tpope/vim-surround'
+Plug 'mattn/emmet-vim'
 Plug 'kana/vim-textobj-user'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-rooter'
@@ -41,6 +42,10 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'rcmdnk/vim_ahk'
 
+
+Plug 'luochen1990/rainbow'
+"au FileType cs,js,typescript,vim call rainbow#load()
+let g:rainbow_active = 1
 
 " snippets plugin
 Plug 'MarcWeber/vim-addon-mw-utils'

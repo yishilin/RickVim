@@ -6,7 +6,26 @@ LINE SELECT, or NORMAL:
 
 
 ## Surround
+1. You have 3 lines and you want each line add <p>:
+1) ctrl+v enter visual block mode (not V)
+2) select the content and rows
+3) $ to the end of line
+4) S<p>
 
+2. You have 3 lines and you want add <p> for the whole 3 lines:
+1) V enter visual mode (not Visual block)
+2) select the content and rows
+3) S<p>
+
+more see 
+http://kana.github.io/config/vim/surround.html
+https://weibeld.net/vim/surround-plugin.html
+https://towardsdatascience.com/how-i-learned-to-enjoy-vim-e310e53e8d56
+
+
+## Emmet.vim
+CN: https://blog.zfanw.com/zencoding-vim-tutorial-chinese/ 
+https://medium.com/vim-drops/be-a-html-ninja-with-emmet-for-vim-feee15447ef1
 
 
 ## Toggle Highlight Search
@@ -19,7 +38,7 @@ NORMAL:
 ,cu
 
 LINE SELECT:
-,cc, 
+,cc
 ,cc
 
 
