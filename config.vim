@@ -964,3 +964,10 @@ augroup rubyunittest
   endfunction
 
 augroup END
+
+
+
+
+" SnipMate
+:imap <C-x> <Plug>snipMateNextOrTrigger
+:smap <C-x> <Plug>snipMateNextOrTrigger

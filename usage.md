@@ -78,6 +78,11 @@ WORD(non blank): W, B, E, F, T
 ^, 0, $, A, I
 
 
+# Snippet
+try this command to see what snippet file you are using:
+:SnipMateOpenSnippetFiles
+
+
 
 =======================================
 
