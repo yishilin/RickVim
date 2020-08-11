@@ -40,8 +40,13 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-Plug 'rcmdnk/vim_ahk'
+Plug 'rcmdnk/vim_ahk' "ahk file syntax
 
+Plug 'vim-test/vim-test'
+Plug 'vim-ruby/vim-ruby'
+let g:ruby_recommended_style = 1
+
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'luochen1990/rainbow'
 "au FileType cs,js,typescript,vim call rainbow#load()
@@ -861,3 +866,91 @@ map <leader>h :History<CR>
 let g:html_start_line = line("'<")
 let g:html_end_line = line("'>")
 "------------------------------------------------
+
+
+
+
+"------------------------------------------------ 
+"" ruby unit test
+"---------------------------- 
+let test#ruby#runner = 'm'
+let g:test#runner_commands = ['M']
+let test#ruby#bundle_exec = 0
+let g:test#ruby#minitest#executable = 'm'
+
+"https://github.com/janko-m/vim-test/blob/master/autoload/test/ruby/m.vim
+
+" these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
+"nmap <silent> t<C-n> :TestNearest<CR>
+"nmap <silent> t<C-f> :TestFile<CR>
+"nmap <silent> t<C-l> :TestLast<CR>
+"nmap <silent> t<C-g> :TestVisit<CR>
+"nmap <silent> t<C-s> :TestSuite<CR>
+
+augroup rubyunittest
+  autocmd!
+  "autocmd BufRead,BufNewFile *_test.rb       nmap <buffer> tt :lcd %:p:h <bar> TestNearest<CR>
+  "autocmd BufRead,BufNewFile *_test.rb       nmap <buffer> tf :lcd %:p:h <bar> TestFile<CR>
+  "autocmd BufRead,BufNewFile *.rb       nmap <buffer> tl :TestLast<cr>
+
+  autocmd BufRead,BufNewFile *.rb  nmap <buffer> tf :call g:RubyRunUnitTestFile()<cr>
+  autocmd BufRead,BufNewFile *.rb  nmap <buffer> tt :call g:RubyRunUnitTestCase()<cr>
+  autocmd BufRead,BufNewFile *.rb  nmap <buffer> gt :call g:RubySwitchTestFile()<cr>
+
+  function! g:RubySwitchTestFile()
+    :lcd %:p:h
+    let file_relative_name = expand("%")
+    let file_relative_name_no_ext  = expand("%:r")
+
+    let index_start = match(file_relative_name, "_test.rb$")
+    if -1 != index_start
+        "end with _test.rb, ie. current in _test.rb
+        let target_file = file_relative_name[0:index_start-1] . ".rb"
+        "echo "file_relative_name:". file_relative_name
+        "echo "index_start:".index_start 
+        "echo "target_file:".target_file
+    else
+        let target_file = file_relative_name_no_ext . "_test.rb"
+    endif 
+
+    let cmd = "e " . target_file
+    "echo cmd
+    :execute cmd
+  endfunction
+
+
+  function! g:RubyRunUnitTestFile()
+    :lcd %:p:h
+    let file_relative_name = expand("%")
+    let file_relative_name_no_ext  = expand("%:r")
+
+    if -1 != match(file_relative_name, "_test.rb$")
+        "end with _test.rb, ie. current in _test.rb
+        let test_file = file_relative_name
+        let cmd = "!cls && m " . test_file
+        :execute cmd
+    else
+        let test_file = file_relative_name_no_ext . "_test.rb"
+        let cmd = "!cls && m " . test_file
+        :execute cmd 
+    endif 
+  endfunction
+  
+  function! g:RubyRunUnitTestCase()
+    :lcd %:p:h
+    let file_relative_name = expand("%")
+    let file_relative_name_no_ext  = expand("%:r")
+
+    if -1 != match(file_relative_name, "_test.rb$")
+        "end with _test.rb, ie. current in _test.rb
+        let test_file = file_relative_name
+        let cmd = "!cls && m " . test_file . ":". line(".")
+        :execute cmd
+    else
+        let test_file = file_relative_name_no_ext . "_test.rb"
+        let cmd = "!cls && m " . test_file
+        :execute cmd 
+    endif 
+  endfunction
+
+augroup END

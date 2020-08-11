@@ -106,4 +106,16 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 vim ~/.tmux.conf
 ```bash
 
-```b
+```
+
+
+
+## 6/ (Optional) Ruby
+
+```bash
+#need install m if Plug 'vim-test/vim-test'
+$ gem install m
+
+
+
+```
