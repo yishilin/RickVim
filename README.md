@@ -117,3 +117,26 @@ vim ~/.tmux.conf
 2. install gem m for ruby unit test
 $ gem install m
 ```
+
+## enhance the search
+ack.vim for quick search
+https://chocolatey.org/packages/ack
+Windows (admin powershell): `choco install ack`
+
+https://github.com/chinanf-boy/ripgrep-zh
+windows: `choco install ripgrep`
+rg -h
+
+https://www.freecodecamp.org/news/how-to-search-project-wide-vim-ripgrep-ack/
+https://www.hi-linux.com/posts/29245.html (*great doc*)
+https://docs.rs/regex/1.3.5/regex/#syntax  
+https://www.jb51.net/article/174964.htm
+
+递归搜索，当前目录搜索 fast，包括所有子目录：rg fast
+在 README.md 中查找 fast: rg fast README.md
+一个单词中包含 fast，不包括 fast(正则表达式)：rg 'fast\w+'
+一个单词中包含 fast，包括 fast: rg 'fast\w*'
+
+
+根据需要使用-E参数来改编码，搜中文时更是如此，如果编码不对根本搜不到。 当不加-E参数时，可以搜到utf-8的文件，搜不到gkb的文件；当加上-E GBK，结果又反过来，可以搜到gbk文件，搜不到utf-8的文件：
+

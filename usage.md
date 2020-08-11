@@ -78,19 +78,36 @@ WORD(non blank): W, B, E, F, T
 ^, 0, $, A, I
 
 
+# Snippet
+try this command to see what snippet file you are using:
+:SnipMateOpenSnippetFiles
+
+
 
 =======================================
 
-## Plugins:
+# Plugins:
 https://blog.lourenci.com/my-favorite-vim-plugins/
 https://blog.csdn.net/andylauren/article/details/52830328
 
-FZF plugin:
+
+## Plug 'junegunn/fzf'
+,p: search and filter file
+
+Windows install:
+rg and fzf command need available
+```shell 
+choco install fzf
+choco install ripgrep
+```
+
 https://segmentfault.com/a/1190000016186540
 https://yqc.im/vim-fzf-config.html
 https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko
 https://github.com/junegunn/fzf.vim
 
+## Plug 'kien/ctrlp.vim'
+ctrl+p: search and filter file
 
 
 ## CheetSheet
