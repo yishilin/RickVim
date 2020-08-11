@@ -896,6 +896,16 @@ augroup rubyunittest
   autocmd BufRead,BufNewFile *.rb  nmap <buffer> tf :call g:RubyRunUnitTestFile()<cr>
   autocmd BufRead,BufNewFile *.rb  nmap <buffer> tt :call g:RubyRunUnitTestCase()<cr>
   autocmd BufRead,BufNewFile *.rb  nmap <buffer> gt :call g:RubySwitchTestFile()<cr>
+  autocmd BufRead,BufNewFile *.rb  nmap <buffer> tr :call g:RubyRunFile()<cr>
+
+
+  function! g:RubyRunFile()
+    :lcd %:p:h
+    let file_relative_name = expand("%")
+    let cmd = "!cls && ruby " . file_relative_name
+    :execute cmd 
+  endfunction
+
 
   function! g:RubySwitchTestFile()
     :lcd %:p:h

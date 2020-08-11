@@ -113,9 +113,7 @@ vim ~/.tmux.conf
 ## 6/ (Optional) Ruby
 
 ```bash
-#need install m if Plug 'vim-test/vim-test'
+1. install ruby: https://rubyinstaller.org/
+2. install gem m for ruby unit test
 $ gem install m
-
-
-
 ```
