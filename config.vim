@@ -93,6 +93,8 @@ call plug#end()
 "" Start the vimrc configuration
 ""================================
 
+let g:config_root_path = expand('<sfile>:p:h')
+
 set nocp
 
 "" Platform
@@ -973,8 +975,9 @@ let g:fzf_command_prefix = 'Fzf'
 " SnipMate
 :imap <C-x> <Plug>snipMateNextOrTrigger
 :smap <C-x> <Plug>snipMateNextOrTrigger
-let g:snippets_dir= expand("%:p:h") . "/snippets"
+let g:snippets_dir= g:config_root_path . "/snippets"
+
+set rtp+=g:config_root_path
+execute "source " .  g:config_root_path . "/test.vim"
 
 
-let g:testvim_path = expand('<sfile>:p:h') . "/test.vim"
-execute "source " .  g:testvim_path
