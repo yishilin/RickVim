@@ -483,7 +483,6 @@ set history=512   "" Number of things to remember in history.
 
 map s <Nop>
 
-source ./test.vim
 
 "" Fast reloading of the .vimrc
 map <silent> <leader>ss :source $MYVIMRC<cr>
@@ -968,10 +967,14 @@ augroup END
 
 
 
+let g:fzf_command_prefix = 'Fzf'
+
 
 " SnipMate
 :imap <C-x> <Plug>snipMateNextOrTrigger
 :smap <C-x> <Plug>snipMateNextOrTrigger
+let g:snippets_dir= expand("%:p:h") . "/snippets"
 
 
-let g:fzf_command_prefix = 'Fzf'
+let g:testvim_path = expand('<sfile>:p:h') . "/test.vim"
+execute "source " .  g:testvim_path

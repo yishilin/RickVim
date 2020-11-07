@@ -45,11 +45,11 @@ augroup typescriptunittest
 
     if -1 != match(file_relative_name, g:typescript_test_end_with . "$")
         let test_file = file_relative_name
-        let cmd = "!start cmd /c cls & npx jest " . test_file . g:end_command
+        let cmd = "!start cmd /c cls & yarn jest " . test_file . g:end_command
         silent! :execute cmd
     else
         let test_file = file_relative_name_no_ext . g:typescript_test_end_with
-        let cmd = "!start cmd /c cls & npx jest " . test_file . g:end_command
+        let cmd = "!start cmd /c cls & yarn jest " . test_file . g:end_command
         silent! :execute cmd
     endif 
   endfunction
