@@ -507,6 +507,8 @@ endfunction
 
 function! Unix2Dos()
   set fileformat=dos
+  silent :%s/\r\n$/\r/g
+  silent :%s/\%x0d$//g
   write
 endfunction
 
