@@ -94,6 +94,13 @@ https://blog.csdn.net/andylauren/article/details/52830328
 ## Plug 'junegunn/fzf'
 ,p: search and filter file
 
+Windows install:
+rg and fzf command need available
+```shell 
+choco install fzf
+choco install ripgrep
+```
+
 https://segmentfault.com/a/1190000016186540
 https://yqc.im/vim-fzf-config.html
 https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko

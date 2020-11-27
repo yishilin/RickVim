@@ -37,8 +37,8 @@ Plug '907th/vim-auto-save'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'junegunn/vim-peekaboo'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'rcmdnk/vim_ahk' "ahk file syntax
 
@@ -859,8 +859,6 @@ augroup END
 
 
 
-map <leader>p :Files<CR>
-map <leader>h :History<CR>
 
 
 
@@ -971,7 +969,11 @@ augroup END
 
 
 
+"fzf
+"https://github.com/junegunn/fzf/blob/master/README-VIM.md
 let g:fzf_command_prefix = 'Fzf'
+map <leader>p :FzfFiles<CR>
+map <leader>h :FzfHistory<CR>
 
 
 " SnipMate
