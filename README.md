@@ -117,3 +117,16 @@ vim ~/.tmux.conf
 2. install gem m for ruby unit test
 $ gem install m
 ```
+
+## enhance the search
+ack.vim for quick search
+https://chocolatey.org/packages/ack
+Windows (admin powershell): `choco install ack`
+
+https://github.com/chinanf-boy/ripgrep-zh
+windows: `choco install ripgrep`
+
+https://www.freecodecamp.org/news/how-to-search-project-wide-vim-ripgrep-ack/
+
+
+
