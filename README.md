@@ -8,7 +8,7 @@
 
 **UNIX(and Windows Git Bash):**
 ```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+curl -k -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 Or simple copy file:
