@@ -1004,6 +1004,7 @@ endif
 " --type-not sql -> Avoid huge sql file dumps as it slows down the search
 " --smart-case -> Search case insensitive if all lowercase pattern, Search case sensitively otherwise
 let g:ackprg = 'rg --vimgrep --type-not sql --smart-case'
+let g:ack_default_options = " -H --nocolor -- nogroup -- column --smart-case  --follow"
 
 " Auto close the Quickfix list after pressing '<enter>' on a list item
 let g:ack_autoclose = 0
@@ -1015,7 +1016,8 @@ let g:ack_use_cword_for_empty_search = 1
 cnoreabbrev Ack Ack!
 
 " Maps <leader>/ so we're ready to type the search keyword
-nnoremap <Leader>/ :Ack!<Space>
+"nnoremap <Leader>/ :Ack!<Space>
+nnoremap <F6> :Ack!<Space>
 " }}}
 
 " Navigate quickfix list with ease
