@@ -986,6 +986,8 @@ map <leader>h :FzfHistory<CR>
 :imap <C-x> <Plug>snipMateNextOrTrigger
 :smap <C-x> <Plug>snipMateNextOrTrigger
 let g:snippets_dir= g:config_root_path . "/snippets"
+let g:snipMate = { 'snippet_version' : 1 }
+
 
 set rtp+=g:config_root_path
 execute "source " .  g:config_root_path . "/test.vim"
