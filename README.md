@@ -39,6 +39,20 @@ git config --global core.autocrlf true
 git config --global core.autocrlf input
 ```
 
+(3) Proxy:
+You may need setup the proxy 
+```bash
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+git config --global https.proxy http://127.0.0.1:10080
+git config --global https.proxy https://127.0.0.1:10080
+
+#or if you use socks5 proxy
+git config --global http.proxy 'socks5://127.0.0.1:10080'
+git config --global https.proxy 'socks5://127.0.0.1:10080'
+```
+
 ## 1/ git clone
 ```bash
 git clone https://github.com/yishilin/RickVim.git ~/RickVim
