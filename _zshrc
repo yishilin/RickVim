@@ -89,12 +89,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#alias cdvim="cd /local/code/shilinvim"
+alias cdvim="cd ~/local/code/RickVim/"
 #alias vim='/usr/local/Cellar/vim/8.0.0002/bin/vim'
 #alias vi='vim'
 alias irb='pry'
 
 alias ls='ls -GFh'
+alias mtr='sudo /usr/local/Cellar/mtr/0.94/sbin/mtr'
 
 alias sshtest='expect -c "spawn ssh root@192.168.0.81; expect \"password\"; send \"123qwe\n\"; interact"'
 alias sshmon='expect -c "spawn ssh yishilin@192.168.0.5; expect \"password\"; send \"1moQiche\n\"; interact"'
@@ -152,6 +153,12 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 #################### Proxy ##################
+# Privoxy will forward http(s) request it receives at port 10088 to 
+# --> socks5:10080 (trojan)
+# command line tools and other apps will respect envnironment variable:
+# http_proxy and https_proxy
+# for example, if Privoxy (and trojan) do not start, 
+# wget https://www.google.com will be blockded by gwf.
 function ProxyStart() {
     export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
     export http_proxy="http://127.0.0.1:10088"
