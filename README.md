@@ -134,9 +134,12 @@ $ gem install m
 ```
 
 ## enhance the search
-ack.vim for quick search
-https://chocolatey.org/packages/ack
-Windows (admin powershell): `choco install ack`
+ack.vim for quick search (ack)
+https://beyondgrep.com/install/
+
+the_silver_searcher (ag)
+https://github.com/ggreer/the_silver_searcher
+
 
 https://github.com/chinanf-boy/ripgrep-zh
 windows: `choco install ripgrep`
