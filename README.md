@@ -134,6 +134,8 @@ $ gem install m
 ```
 
 ## enhance the search
+
+```
 ack.vim for quick search (ack)
 https://beyondgrep.com/install/
 
@@ -155,6 +157,8 @@ https://www.jb51.net/article/174964.htm
 一个单词中包含 fast，不包括 fast(正则表达式)：rg 'fast\w+'
 一个单词中包含 fast，包括 fast: rg 'fast\w*'
 
-
-根据需要使用-E参数来改编码，搜中文时更是如此，如果编码不对根本搜不到。 当不加-E参数时，可以搜到utf-8的文件，搜不到gkb的文件；当加上-E GBK，结果又反过来，可以搜到gbk文件，搜不到utf-8的文件：
+根据需要使用-E参数来改编码，搜中文时更是如此，如果编码不对根本搜不到。 
+当不加-E参数时，可以搜到utf-8的文件，搜不到gkb的文件；
+当加上-E GBK，结果又反过来，可以搜到gbk文件，搜不到utf-8的文件：
+```
 
