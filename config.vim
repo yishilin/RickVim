@@ -77,7 +77,7 @@ Plug 'mbbill/undotree' "The undo history visualizer
 
 "install colorschemes https://github.com/flazz/vim-colorschemes
 "https://github.com/rafi/awesome-vim-colorschemes
-Plugin 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 
 "only available in terminal 
 Plug 'tomasr/molokai' 
@@ -300,8 +300,8 @@ if has("gui_running")
     let g:molokai_original = 0
   else
     "" In GUI linux/mac platform
-    "colorscheme blackboard
-    colorscheme molokai
+    colorscheme blackboard
+    "colorscheme molokai
 
   endif
 
