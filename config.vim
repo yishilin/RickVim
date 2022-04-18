@@ -75,8 +75,13 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'mbbill/undotree' "The undo history visualizer
 
-"colorscheme molokai
+"install colorschemes https://github.com/flazz/vim-colorschemes
+"https://github.com/rafi/awesome-vim-colorschemes
+Plugin 'flazz/vim-colorschemes'
+
+"only available in terminal 
 Plug 'tomasr/molokai' 
+
 Plug 'sheerun/vim-polyglot'
 
 Plug 'majutsushi/tagbar'
@@ -240,7 +245,7 @@ if 'windows' == g:platform
 elseif 'mac' == g:platform
   "set guifont=ProggyCleanCP:h12:cANSI
   "set guifont=ProggyCleanTT:h12:cDEFAULT
-  set guifont=MONACO:h10
+  set guifont=MONACO:h14
   "set guifont=Fixedsys:h11
   "set guifont=Consolas:h11:cDEFAULT
 else 
@@ -295,7 +300,9 @@ if has("gui_running")
     let g:molokai_original = 0
   else
     "" In GUI linux/mac platform
-   colorscheme blackboard
+    "colorscheme blackboard
+    colorscheme molokai
+
   endif
 
 else
