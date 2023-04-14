@@ -756,6 +756,8 @@ let g:mark_multiple_trigger = "<C-n>"
 "" tab setting
 "----------------------------
 let g:SuperTabNoCompleteAfter = ['^', ',', '\s']
+set completeopt=menuone
+let g:SuperTabLongestHighlight = 1
 
 function! g:SetTab(expandEnable, spaceNum)
   let spaceNum = a:spaceNum
