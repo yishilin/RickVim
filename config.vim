@@ -11,6 +11,27 @@
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
+
+let mapleader = ","
+let maplocalleader = ","
+
+
+" =====================================
+" Which-Key 
+" =====================================
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+let timeoutlen = 500
+let g:which_key_use_floating_win = 1  " 使用悬浮窗显示（Neovim推荐）
+let g:which_key_sep = ' → '  " 快捷键与描述的分隔符
+
+" 绑定 Leader 键触发 which-key
+nnoremap <silent> <leader> :<c-u>WhichKey ','<CR>  " 逗号触发全局 Leader 提示
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual ','<CR>  " 可视模式下触发
+" . 可选：局部 Leader 触发（若用 <localleader>）
+nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
+" =====================================
+
+
 Plug 'preservim/nerdtree'
 "Plug 'yegappan/mru', { 'tag': 'v3.3'}
 Plug 'yishilin/mru', { 'branch': 'absolute_path'}
@@ -51,6 +72,8 @@ Plug 'vim-test/vim-test'
 Plug 'vim-ruby/vim-ruby'
 let g:ruby_recommended_style = 1
 
+
+
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'luochen1990/rainbow'
@@ -82,6 +105,8 @@ Plug 'flazz/vim-colorschemes'
 "only available in terminal 
 Plug 'tomasr/molokai' 
 
+
+
 Plug 'sheerun/vim-polyglot'
 
 Plug 'majutsushi/tagbar'
@@ -90,6 +115,10 @@ let g:tagbar_position = 'left'
 
 Plug 'elzr/vim-json'
 let g:vim_json_syntax_conceal = 0
+
+
+Plug 'machakann/vim-highlightedyank'
+let g:highlightedyank_highlight_duration = 3000
 
 
 Plug 'leafgarland/typescript-vim'
@@ -186,8 +215,6 @@ else
 endif
 
 
-let mapleader = ","
-"let maplocalleader = ","
 
 set wildmenu         "enable ctrl-n and ctrl-p to scroll thru matches
 
@@ -1038,3 +1065,6 @@ nnoremap <silent> [q :cprevious<CR>
 nnoremap <silent> ]q :cnext<CR>
 
 "------------------------------------------------ 
+
+
+
