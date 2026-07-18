@@ -16,6 +16,24 @@ let mapleader = ","
 let maplocalleader = ","
 
 
+
+" =====================================
+" Always use the ABC input source after any Vim mode change.
+" =====================================
+if has('macunix') && executable(expand('~/.local/bin/vim-select-abc'))
+  function! s:VimSelectEnglishInput() abort
+    call system(expand('~/.local/bin/vim-select-abc'))
+  endfunction
+
+  augroup vim_force_english_input
+    autocmd!
+    autocmd VimEnter,FocusGained * call <SID>VimSelectEnglishInput()
+    autocmd ModeChanged *:* call <SID>VimSelectEnglishInput()
+  augroup END
+endif
+
+
+
 " =====================================
 " Which-Key 
 " =====================================
